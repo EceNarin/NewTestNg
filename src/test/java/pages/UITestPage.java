@@ -11,11 +11,14 @@ public class UITestPage {
     public UITestPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(xpath = "//a[@href=\"/visibility\"]")
-    public WebElement visibility;
+    @FindBy(xpath = "//input[@id=\"newButtonName\"]")
+    public WebElement text;
     @FindBy(xpath = "//tbody//tr//td//button")
     public List<WebElement> playGroundButtons;
-
+    @FindBy(xpath = "//*[@id=\"overview\"]/div/div/div/h3/a")
+    public List<WebElement> allTable;
+    @FindBy(xpath = "//button[@id=\"updatingButton\"]")
+    public WebElement textButton;
     public WebElement choice(List<WebElement> list,String str){
         WebElement element=null;
         for (WebElement w:list) {

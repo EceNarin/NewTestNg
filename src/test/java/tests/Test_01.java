@@ -25,7 +25,7 @@ public class Test_01 extends TestBaseRapor {
         //2. Open "Visibility" link in a new tab
         extentTest.info("Open \"Visibility\" link in a new tab");
         firstWindowsHandle=Driver.getDriver().getWindowHandle();
-        ui.visibility.click();
+        ui.choice(ui.allTable,"Visibility").click();
         //3. Switch to the tab
         //4. Verify that all of eight buttons are displayed
         extentTest.pass("Verify that all of eight buttons are displayed");
