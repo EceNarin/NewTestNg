@@ -55,6 +55,27 @@ public class TradyLinnPages {
     public List<WebElement> categories2;
     @FindBy(xpath = "//*[@id=\"product_brand\"]/li/input")
     public List<WebElement> productBrand;
+
+
+    //saniye hanim
+    @FindBy(xpath = "//nav[@class=\"woocommerce-MyAccount-navigation col-md-3 mb-8\"]/ul/li/a")
+    public List<WebElement> pano;
+    @FindBy(xpath = "    @FindBy(xpath = \"//*[@id=\\\"product_brand\\\"]/li/input\")\n" +
+            "    public List<WebElement> productBrand;")
+    public List<WebElement> siparislerTble;
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/p")
+    public WebElement indirmeler;
+    @FindBy(xpath = "//table[@class=\"address-table\"]//tbody[1]//tr")
+    public List<WebElement> faturaAdresleri;
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/div[2]/div/address/table/tbody/tr")
+    public List<WebElement> gönderimAdresi;
+
+    @FindBy(xpath = "//button[@value=\"Değişiklikleri kaydet\"]")
+    public WebElement degisiklikUpdate;
+    @FindBy(xpath = "(//form[@method=\"post\"])[1]//p//label")
+    public List<WebElement> hesapDetaylariForm;
+
+
     public WebElement choiceElement(List<WebElement> myStoreMenu,String str){
         WebElement element=null;
         for (WebElement w:myStoreMenu) {
@@ -73,10 +94,18 @@ public class TradyLinnPages {
         }
         return element;
     }
+    public void list(List<WebElement> list ){
+        list.stream().forEach(t-> System.out.println(t.getText()));
+    }
 
-
+    public WebElement check(List<WebElement> list){
+        WebElement element=null;
+        for (WebElement w:myStoreMenu) {
+            element=w;
+        }
+        return element;
+    }
 
 
 
 }
-
