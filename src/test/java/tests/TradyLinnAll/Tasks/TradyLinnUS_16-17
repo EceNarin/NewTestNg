@@ -1,0 +1,132 @@
+US_0016                	TC001	Manage customers; kayitli kisilerin isim/ kullanıcı adi/ emaili, adresi, harcama miktarı, son siparişleri görülmeli	tradylinn.com erişilebilir olmalı.	1. User goes to tradylinn.com
+				2. User clicks "Giriş Yap"
+				3. User enters email
+				4.User enters password
+				5.User clicks "Giriş Yap" button
+				6.User clicks "Hesabim"
+				7.User clicks "Store Manager"
+				8.User scrolls down the page
+				9.User clicks "musteriler"
+				10.User scrolls down the page
+				11.User sees "Manage customers"
+				12.The name/username/email, address, spending amount, last orders of the registered persons are displayed.
+	TC003	Yeni kisi eklenebilmeli; kullanıcı adi, email, isim, soyisim	tradylinn.com erişilebilir olmalı.	1. User goes to tradylinn.com
+				2. User clicks "Giriş Yap"
+				3. User enters email
+				4.User enters password
+				5.User clicks "Giriş Yap" button
+				6.User clicks "Hesabim"
+				7.User clicks "Store Manager"
+				8.User scrolls down the page
+				9.User clicks "musteriler"
+				10.User clicks "Yeni ekle" button
+				11.User enters "Username"
+				12.User enters "Email"
+				13.User scrolls down the page
+				14.User enters "First Name"
+				15.User enters "Last Name"
+
+
+US_0017	TC001	Billing address; isim, soy isim, şirket ismi, tel, adres1 ve adres iki (optional), ülke, sehir, posta kodu	tradylinn.com erişilebilir olmalı.	1. User goes to tradylinn.com
+				2. User clicks "Giriş Yap"
+				3. User enters email
+				4.User enters password
+				5.User clicks "Giriş Yap" button
+				6.User clicks "Hesabim"
+				7.User clicks "Store Manager"
+				8.User scrolls down the page
+				9.User clicks "musteriler"
+				10.User clicks "Yeni ekle"
+				11.User enters "Username"
+				12.User enters "Email"
+				13.User scrolls down the page
+				14.User enters "First Name"
+				15.User enters "Last Name"
+				16.User clicks "Address" button
+				17.User enters First Name
+				18..User enters Last Name
+				19.User enters Company Name
+				20.User enters Phone
+				21.User enters Address 1
+				22.User enters Address 2
+				23.User enters Country
+				24.User enters City/Town
+				25.User enters State/County
+				26.User enters Postcode/Zip
+
+
+
+
+	TC002	Shipping address; yukaridaki adresleri ayni olarak ekleyebilirler	tradylinn.com erişilebilir olmalı.	1. User goes to tradylinn.com
+				2. User clicks "Giriş Yap"
+				3. User enters email
+				4.User enters password
+				5.User clicks "Giriş Yap" button
+				6.User clicks "Hesabim"
+				7.User clicks "Store Manager"
+				8.User scrolls down the page
+				9.User clicks "musteriler"
+				10.User clicks "Yeni ekle"
+				11.User enters "Username"
+				12.User enters "Email"
+				13.User scrolls down the page
+				14.User enters "First Name"
+				15.User enters "Last Name"
+				16.User clicks "Address" button
+				17.User enters First Name
+				18..User enters Last Name
+				19.User enters Company Name
+				20.User enters Phone
+				21.User enters Address 1
+				22.User enters Address 2
+				23.User enters Country
+				24.User enters City/Town
+				25.User enters State/County
+				26.User enters Postcode/Zip
+				27.User submit "Same as Billing"  button
+
+
+
+	TC003	 Veya yeniden yukarıdaki tum adres bilgilerini farklı olarak ekleyebilirler	tradylinn.com erişilebilir olmalı.
+				1. User goes to tradylinn.com
+				2. User clicks "Giriş Yap"
+				3. User enters email
+				4.User enters password
+				5.User clicks "Giriş Yap" button
+				6.User clicks "Hesabim"
+				7.User clicks "Store Manager"
+				8.User scrolls down the page
+				9.User clicks "musteriler"
+				10.User clicks "Yeni ekle"
+				1`1.User enters "Username"
+				12.User enters "Email"
+				13.User scrolls down the page
+				14.User enters "First Name"
+				15.User enters "Last Name"
+				16.User clicks "Address" button
+				17.User enters First Name
+				18..User enters Last Name
+				19.User enters Company Name
+				20.User enters Phone
+				21.User enters Address 1
+				22.User enters Address 2
+				23.User enters Country
+				24.User enters City/Town
+				25.User enters State/County
+				26.User enters Postcode/Zip
+				27.User sees button is not selected "Same as Billing"  button
+				28.User enters First Name
+				29.User enters Last Name
+				30.User enters Company Name
+				31.User enters Phone
+				32.User enters Address 1
+				33.User enters Address 2
+				34.User enters Country
+				35.User enters City/Town
+				36.User enters State/County
+				37.User enters Postcode/Zip
+
+
+
+
+

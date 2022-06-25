@@ -1,0 +1,32 @@
+US_008	TC_0001	Manage Stock, Stok yönetimi / Order yonetimi	Satıcı oturum acabilmeli, Store Manager bölümünden Stock Manager bolumune erişebilmeli.	1) User goes to tradylinn.com	Prod environment=  https://tradylinn.com/				Cevdet
+				2) User clicks "Giriş Yap"	UserMail =  projectgroup39batch@gmail.com
+				3) User enters email	UserPassword =  123Project&
+				4) User enters password
+				6) User clicks "Giriş Yap" button
+				7) User clicks "Hesabım"
+				8) User clicks "Store Manager"
+				9) User clicks "Ürün"
+				10) User clicks "Stock Manager"	"Stock Manager" button
+
+US_009	TC_0002	Shipping opsiyonu ozellikleri	Satıcı oturum acabilmeli, Store Manager bölümünden Shipping bolumune erişebilmeli.	1) User goes to tradylinn.com	Prod environment=  https://tradylinn.com/				Cevdet
+				2) User clicks "Giriş Yap"	UserMail =  projectgroup39batch@gmail.com
+				3) User enters email	UserPassword =  123Project&
+				4) User enters password
+				6) User clicks "Giriş Yap" button
+				7) User clicks "Hesabım"
+				8) User clicks "Store Manager"
+				9) User clicks "Ürün"
+
+
+US_022	TC_0003	indirimli Urunler listeleme ve siralama 	Kullanici indirimli urunleri listeleyebilmeli ve bu urunleri siralayabilmeli	Kullanici https://tradylinn.com/ adresine gider.	Prod environment=  https://tradylinn.com/	Kullanici sayfaya gidebilmeli			Cevdet
+				Kullanici "Giris yap" butonuna tiklar	UserMail =  projectgroup39batch@gmail.com	Kullanici giris sayfasina gidebilmeli
+				Kullanici Usermail ve password girer	UserPassword =  123Project&	kullanici mail ve sifre girebilmeli
+				kullanici giris yap butonuna tiklar 		Kullanici giris yap butonuna basabilmeli
+				Kullanici anasayfa ekraninda indirimli urunler, Tumunu gor'e tiklar 		Kullanici acilan sayfada indirimli urunler - tumunu gor 'e tiklayabilmeli
+				Kullanici indirimli urunler sayfasinda "Sirala" gorunurlugunu test eder 		Gidilen sayfada Sirala gorunmeli
+				Kullanici Siralamada asagaidaki seceneklerin oldugunu dogrular.		Gidilen sayfada Sirala secenekleri gorunmeli
+				* E n cok incelenene gore sirala
+				* E n cok oy alana gore sirala
+				* En yeniye gore sirala
+				* Fiyata gore sirala:  Dusukten yuksege
+				* Fiyata gore sirala:  Yuksekten dusukten

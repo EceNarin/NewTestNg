@@ -1,0 +1,35 @@
+	Test Case ID	Test Objective 	Pre-Condition	Steps	Test Data	Expected Result	Actual Result 	Status
+US_0018	    TC_001	Request ID Geri isteme istegi	requested id geri isteme istegi	1 kullanici tradylinn.com sitesine gider
+				2 hesabim butonuna basar
+				3.Email adresini girer
+				4. password girer
+				5.giris butonunu tiklar
+				6.store managere girer
+				7.siparisi verilen emirleri gorur
+				8.iptal edilmek istenen urunu secer ve urununsagindaki
+				view detailsi tiklar.
+	    TC_002
+				9.emirler sayfasina girer
+				10.iptal edilecek urunu secer view details butonuna tiklar
+				11 Order statuyu tamamlandi olarak secer.
+				12.update butonunu tiklar.
+
+				13.Hesabim butonuna tiklanir
+				14. siparislere girer.
+	    TC_003			15.iptal edilecek urunu secer. destek butonuna basar
+				16.tabloyu doldurur.
+				17.Submit e tiklar ticket ID nosunu gorur
+
+	TC_004			18.Store managere tiklar
+				19.emirlere tiklar.
+				20.iptal edilecek urunun Refund registration butonunu
+				in proceed yazisi cikar
+				21.Submit i tiklar
+
+				22.Geri odeme secenegini tiklar
+				23.siparisi iptal edilen urunun butun bilgileri gorunur olur
+
+
+
+
+

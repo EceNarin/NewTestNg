@@ -66,6 +66,36 @@ public class ReusableMethods2 {
         }
         Driver.getDriver().switchTo().window(origin);
     }
+    public WebElement choiceElement(List<WebElement> myStoreMenu,String str){
+        WebElement element=null;
+        for (WebElement w:myStoreMenu) {
+            if(w.getText().equalsIgnoreCase(str)){
+                element=w;
+            }
+        }
+        return element;
+    }
+    public WebElement choiceContainsElement(List<WebElement> myStoreMenu,String str){
+        WebElement element=null;
+        for (WebElement w:myStoreMenu) {
+            if(w.getText().toLowerCase().contains(str.toLowerCase())){
+                element=w;
+            }
+        }
+        return element;
+    }
+    public void list(List<WebElement> list ){
+        list.stream().forEach(t-> System.out.println(t.getText()));
+    }
+
+    public WebElement check(List<WebElement> list){
+        WebElement element=null;
+        for (WebElement w:list) {
+            element=w;
+        }
+        return element;
+    }
+
     public static String switchToWindowEce(String firstPageHandle){
         Set<String> handles= Driver.getDriver().getWindowHandles();
         String other= "";  // handles.stream().filter(t->!t.equals(firstPageHandle)).findAny().get();

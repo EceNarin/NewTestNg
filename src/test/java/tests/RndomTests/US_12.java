@@ -1,4 +1,4 @@
-package tests;
+package tests.RndomTests;
 
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeTest;

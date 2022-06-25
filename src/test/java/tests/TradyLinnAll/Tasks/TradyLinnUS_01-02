@@ -1,0 +1,65 @@
+US 0001	TC_0001	Vendor olarak kayıt icin ‘Become a vendor’ butonu ile navigate ediniz	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	www.tradylinn.com	Tradylinn linkine gidebilmeli.
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0002	Registration sayfasında uc özellik olmalı; email, password, confirm password	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	www.tradylinn.com	e mail password confirme password kutuları görüntülenebilmeli
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				4. e mail- pasword- confirm password kutularının görünebilir olduğunu test et
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0003	Email bos birakilamaz ve geçerli bir email olmalı	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	"www.tradylinn.com
+e mail:projectgroup39batch@gmail.com
+password:123Project&"	e mail kutusu boş bırakıldığında ve geçersiz bir e mail girildiğinde kayıt işleme tamamlanmamalı
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				4. e mail- pasword- confirm password kutularının görünebilir olduğunu test et
+				5. e mail kutusuna tıklayın
+				6. e mail kutusuna gecerli bir mail adresi gir
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0004	Email unique olmali	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	"www.tradylinn.com
+e mail:projectgroup39batch@gmail.com
+password:123Project&"	Girilen email adresi Unique olmadıgında kayıt islemi tamamlanmamalı
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				4. e mail- pasword- confirm password kutularının görünebilir olduğunu test et
+				5. e mail kutusuna tıklayın
+				6. e mail kutusuna gecerli bir mail adresi gir
+				7. girilen e mail adresinin uniqe oldugunu test et
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0005	Gulch bir password olusturulmali: kucuk harf, büyük harf, rakam ve special karakter kullanılmalı	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	"www.tradylinn.com
+e mail:projectgroup39batch@gmail.com
+password:123Project&"	Gulch password olusturulmadıgında kayıt islemine devam edilmemeli
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				4. e mail- pasword- confirm password kutularının görünebilir olduğunu test et
+				5. e mail kutusuna tıklayın
+				6. e mail kutusuna gecerli bir mail adresi gir
+				7. girilen e mail adresinin uniqe oldugunu test et
+				8. Password kutusuna tıklayın
+				9. Gulch bir password olusturulmali: kucuk harf, büyük harf, rakam ve special karakter kullanılarak bir password olusturun
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0006	Password ayni sekilde tekrar kullanılmalı	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	"www.tradylinn.com
+e mail:projectgroup39batch@gmail.com
+password:123Project&"	Benzer password girilmediğinde kayıt islemine devam edilmemeli
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				5. Email kutusuna tıklayın
+				4. Unique ve geçerli bir e mail adresi girin
+				5.Password kutusuna tıklayın
+				6.Büyük küçük ve özel karakter içeren, en az 12 haneli bir password girin
+				7. Confirm Password kutusuna tıklayın
+				8. Daha önce girmiş oldugunuz passwordu tekrarlayın
+User Story ID	Test Case ID	Test Objective	Pre-Condition	Steps	Test Data	Expected Result
+US 0001	TC_0007	Email uzerinden account onaylanmalı	www.tradylinn.com sitesi çalışabilir olmalı	1. www.tradylinn.com sayfasına gidin	"www.tradylinn.com
+e mail:projectgroup39batch@gmail.com
+password:123Project&"	kayıtlı e posta adresine üyelik onay linki gelmeli
+				2. Üye OL butonuna tıklayın
+				3. Satıcı Ol linkine tıklayın
+				4. Email kutusuna tıklayın
+				5. Unique ve geçerli bir e mail adresi giri5
+				6.Password kutusuna tıklayın
+				7.Büyük küçük ve özel karakter içeren, en az 12 haneli bir password girin
+				8. Confirm Password kutusuna tıklayın
+				9. Daha önce girmiş oldugunuz passwordu tekrarlayın
+				10. Kayıt Ol butonuna tıklayın
+				11. Sistem tarafından mail adresinize üyelik Onay Linki geldigini test et.		

@@ -1,4 +1,4 @@
-package tests;
+package tests.RndomTests;
 
 import org.apache.commons.math3.ode.sampling.StepInterpolator;
 import org.openqa.selenium.Keys;

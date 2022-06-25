@@ -1,4 +1,4 @@
-package tests;
+package tests.RndomTests;
 
 import org.openqa.selenium.WindowType;
 import org.testng.annotations.Test;

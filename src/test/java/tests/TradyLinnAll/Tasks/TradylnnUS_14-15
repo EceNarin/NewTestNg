@@ -1,0 +1,53 @@
+US_014	TC_0001	Satici kupon listesini gorebilbeli	trandylinn.com	1) User goes to tradylinn.com	tradylinn.com URL	Satici kupon listesini gorebilmeli	kupon listesini gorur	PASSED	Mulkiye
+				2) User clicks "Giriş Yap"	"Giriş Yap" button
+				3) User enters email	"Kullanıcı adı veya e-posta adresi" text
+				4) User enters password	"Parola" text
+				5) User clicks "Beni hatırla" checkbox	"Beni hatırla" checkbox
+				6) User clicks "Giriş Yap" button	"Giriş Yap" button
+				7) User clicks "Hesabım"	"Hesabım" link
+				8) User clicks "Store Manager"	"Store Manager" link
+				9)User clicks "Coupon"	9)User clicks "Coupon"
+
+
+
+
+
+
+
+
+
+	TC_0002	Yeni coupon eklenebilmeli Restrection butonuna basilip liste gorunmeli	Store manager bolumune erisilmeli	User clicks "Resriction"	"Restriction" sec	Satici kupon eklerken minimum ,maximum ve diger adimlari tek tek girmeli	satici kupon deger ekler	PASSED	Mulkiye
+				User enter "Minimum spend"	"Minimum spend"
+				User enter "maximum spend"	"Mximum spend"
+				User clicks "Individual use only"	"Individual use only"
+				User clicks "Exlude sale items"	"Exlude sale items"
+				User clicks "products"	"Products"
+				User clicks "Exlude products"	"Exlude products"
+				User clicks "Product Categories"	"Product Categories"
+
+
+
+
+
+
+
+
+
+
+US_015	TC_0001			User clicks "Limit"	"Limit"	satici kupon eklerken limit adimlarini gerceklestirmeli	satici kupon limit belirler	PASSED	Mulkiye
+				User clicks "Usage limit per coupon"	"Usage limit per coupon"
+				User clicks "Limit usage to X items"	"Limit usage to X items"
+				User clicks "Usage limit per user"	"Usage limit per user"
+				User clicks "submit" butonu	"submit" butonu
+
+
+
+
+
+
+
+
+
+
+
+

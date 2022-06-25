@@ -1,10 +1,12 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TradyLinnPages {
@@ -19,6 +21,7 @@ public class TradyLinnPages {
     public WebElement password;
     @FindBy(xpath = "(//button[@value=\"Giriş Yap\"])[1]")
     public WebElement login;
+
     @FindBy(xpath = "//*[@id=\"menu-item-1074\"]/a")
     public WebElement hesabim;
     @FindBy(linkText = "Store Manager")
@@ -33,6 +36,7 @@ public class TradyLinnPages {
     public WebElement productName;
     @FindBy(xpath = "//img[@id=\"featured_img_display\"]")
     public WebElement photo;
+    //*[@id="wcfm_menu"]/div/a
     @FindBy(xpath = "//*[@id=\"wcfm_menu\"]/div")
     public List<WebElement> myStoreMenu;
     @FindBy(xpath = "//*[@id=\"wcfm-products\"]/thead/tr/th")
@@ -55,7 +59,13 @@ public class TradyLinnPages {
     public List<WebElement> categories2;
     @FindBy(xpath = "//*[@id=\"product_brand\"]/li/input")
     public List<WebElement> productBrand;
+    //hatice hanm
 
+    @FindBy(xpath = "//*[@id=\"wcfm-shop-customers\"]/thead/tr/th")
+    public List<WebElement> tableBaslik;
+
+    @FindBy(xpath = "//*[@id=\"wcfm-shop-customers\"]/tbody/tr\n")
+    public List<WebElement> tableBody;
 
     //saniye hanim
     @FindBy(xpath = "//nav[@class=\"woocommerce-MyAccount-navigation col-md-3 mb-8\"]/ul/li/a")
@@ -76,10 +86,46 @@ public class TradyLinnPages {
     public List<WebElement> hesapDetaylariForm;
 
 
+    //US_22
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/section/div/div[2]/div/div/div/h2/a")
+    public List<WebElement> tumunuGor;
+    @FindBy(xpath = "//ul[@class='breadcrumb']/li[3]")
+    public List<WebElement> homePageCategories;
+
+    @FindBy(xpath = "//select[@name=\"orderby\"]")
+    public WebElement dde;
+
+    @FindBy(xpath = "//span[@class=\"price\"]")
+    public List<WebElement> allPrices;
+    @FindBy(xpath = "//*[@id=\"main\"]/div/div/div[2]/div/div/div/section/div/div[1]/div/div/div/h2/a")
+    public List<WebElement> allCategories;
+    //span[@class="price"]
+    @FindBy(xpath = "/html/body/div[2]/div[1]/ul/li[3]")
+    public WebElement check;
+
+    public WebElement selecto(String str){
+        List<WebElement> element=Driver.getDriver().findElements(By.xpath("//*[@id=\"main\"]/div/div/div/div/div/div/section/div/div[1]/div/div/div/h2/a"));
+        WebElement elemento=null;
+        for(int i=0;i<element.size();i++){
+            if(element.get(i).getText().trim().equalsIgnoreCase(str)){
+
+                elemento= Driver.getDriver().findElements(By.xpath("//*[@id=\"main\"]/div/div/div/div/div/div/section/div/div[2]/div/div/div/h2/a")).get(i);
+            }
+        }
+        return elemento;
+    }
+    public List<Integer> makeStringToInt(List<WebElement> list){
+        List<Integer> priceList=new ArrayList<>();
+        for (int i=0;i<list.size();i++) {
+            priceList.add(i,Integer.parseInt(list.get(i).getText().trim().replaceAll("[^0-9]","")));
+        }
+        return priceList;
+    }
+
     public WebElement choiceElement(List<WebElement> myStoreMenu,String str){
         WebElement element=null;
         for (WebElement w:myStoreMenu) {
-            if(w.getText().equalsIgnoreCase(str)){
+            if(w.getText().trim().equalsIgnoreCase(str)){
                 element=w;
             }
         }
@@ -88,7 +134,7 @@ public class TradyLinnPages {
     public WebElement choiceContainsElement(List<WebElement> myStoreMenu,String str){
         WebElement element=null;
         for (WebElement w:myStoreMenu) {
-            if(w.getText().toLowerCase().contains(str.toLowerCase())){
+            if(w.getText().trim().toLowerCase().contains(str.toLowerCase())){
                 element=w;
             }
         }

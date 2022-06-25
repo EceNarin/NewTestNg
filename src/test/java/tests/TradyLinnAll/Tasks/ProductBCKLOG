@@ -1,0 +1,135 @@
+US_001 	Vendor olarak, güvenli bir registration yapmalıyım	Vendor olarak kayıt icin ‘Become a vendor’ butonu ile navigate ediniz
+		Registration sayfasında uc özellik olmalı; email, password, confirm password
+		Email bos birakilamaz ve geçerli bir email olmalı
+		Email unique olmali
+		Gulch bir password olusturulmali: kucuk harf, büyük harf, rakam ve special karakter kullanılmalı
+		Password ayni sekilde tekrar kullanılmalı
+		Email uzerinden account onaylanmalı
+
+US_002	Vendor sign in, Vendor olarak Sign in yapılabilmeli	Vendor olarak email ve şifre girilmeli ve sistemde My Accout görünmeli
+		Orders, Downloads, addresses, account details,whislist ve Logout gorulmeli
+		Dashboard altında ise; Store manager, orders, downloads, addresses , account details, appointments, wishlist
+		Support tickets, followings ve log out olmali
+
+US_003	Vendor olarak, order verebilmeliyim ve orderlarimi sepette görebilmeliyim	Orders da Browse products a gidilmeli
+		5 urun secilmeli ve Secilen ürünler tek tek sepete aktarılmalı.
+		Sepete ve ordan checkout a gidilmeli
+		Tum address bilgileri tam olarak girilmeli
+		Billing bilgileri tam olarak eklenmeli ve place order diyerek order yapılmalı
+
+US_004	"US_003 defaming olarak, View Cart yapılmalı
+ve stok ürünleri fazla miktar
+secilebilmeli ve stok fazlasına müsade etmemeli"	Secilen ürünler View Cartta görülmeli; Rakam, miktar ve toplam olarak görülmeli
+		Arti ile urun rakami artirilabilmeli ve eksi ile rakamlar dusurulebilmeli
+		Stok fazlası urun eklenememeli ve Update cart ile rakam ortalamaları güncellenmeli
+		Clear cart ile rakamlar silinebilmeli
+		Coupon secenegi olmali
+		Tekrar shopping devam etme butonu olmalı
+		Shipping bilgileri sag tarafta görülmelive toplam rakam sagda populate etmeli
+		Proceed to checkout Miami basarili bir sekilde ödeneklere yönlendirmeli
+
+US_005	Store Manager olarak, Products a gidip yeni ürünler yükleyebilmeliyim	Productsta urun listemi görmeliyim; status, stock, price, date
+		Yeni urun ekle (Add new); urun icin virtual veya downloadable secenegi olmali
+		Urun ismi ekle; product title, satis miktarı
+		Urun fotosu eklenebilmeli
+		Kisa tanımlama ve geniş tanımlama (short description, Description)
+
+US_006	(US_005 devami) Secilen ürünlerin categorileriini belirlemeliyim	Besin takviyeleri
+		Cos satanlar
+		Elektrik & Elektronik
+		Ev & yasam
+		Indirimli ürünler
+		Kitap & müzik &Film
+		Kozmetik & kisisel
+		Moda & Giyim
+		Oyuncak
+		Taki & aksesuar
+		Yeni ürünler
+
+US_007	(US_005 devami) Secilen ürünlerin brandini belirlemeliyim	Elegant Auto group
+		Green Grass
+		NodeJS
+		NSB
+		RED
+		SkySuite Tech
+		Sterling
+
+US_008	Manage Stock, Stok yönetimi / Order yonetimi	Urun miktarı stock belirlenmeli
+		Backorder izni verilebilmeli, gecici verilmeme optionu olmalı veya verilmeli ama müşteri bilgilendirilmeli
+
+US_009	Shipping opsiyonu	Kilo ve boyut belirlenmeli
+		Hacim ve ne kadar surede teslimat yapilacagi belirlenmeli
+
+US_010	Order Attributes / Özellikleri	Renk secenegi; beyaz, siyah, yeşil vs tum renkler belirtilmeli
+		Size secenegi; small, medium, large, extra large olmali
+
+US_011	Toptan urun gösterme ayarlari	Urun çeşidi
+		Units per piece
+		Minimum quantity
+
+US_012	Store manager olarak hesabıma gidince tum portal a access elde etmeliyim	Siparisler olmali ve sipariş edilen ürünler sıralanmalı
+		Indirimler; eğer indirimler ürünler tanimlanmissa, indirimli ürünleri listeli görebilmeliyim
+		Adresler ; Daha once girilen fatura adresi ve gönderim adresi listelenmeli
+		Hesap detaylari; hesap bilgisi ve eposta adresi goruntulenmeli ve update edilebilir olmalı
+
+US_013	Store manager olarak, kuponları olusturabilmeliyim	Coupon kodu verilmeli
+		Tanimlama yazılmalı
+		Indirim sekli / discount
+		Coupon amount
+		Coupon expiry date / urun kuponu son kullanım tarihi girilmeli
+		Free shipping uygulanmalı
+		Show on store
+
+US_014	(US_013 defaming), Restrictions yapilabilmeli / ürüne kısıtlamalar getirilebilmeli	Minimum spend / en az alma miktari girilmeli
+		Maximum spend / maksimum alma miktarı girilmeli
+		Individual use only / kisisel kullanım sadece secenegi olmalı
+		Exclude sale items / bazi satis ürünleri disinda tut
+		Exclude categories / bazi kategorileri disinda tut
+
+US_015	(US_013 defaming), Limitlemeler	Usage limit per coupon / kupon basina kullanım limiti eklenebilmeli
+		Limit usage to X items/ Belli urunlere kupon kullanım limiti uygula
+		Usage limit per user / belli kimselere kullanım limiti koy mesela çok kullanan userlara
+
+US_016	Musteriler listelenmeli ve eklenebilmeli	Manage customers; kayitli kisilerin isim/ kullanıcı adi/ emaili, adresi, harcama miktarı, son siparişleri görülmeli
+		Kisilerin tum bilgileri pdf, excel ve csa olarak indirilebilmeli
+		Yeni kisi eklenebilmeli; kullanıcı adi, email, isim, soyisim
+
+US_017	kisinin adres bilgileri eklenebilmeli	Billing address; isim, soy isim, şirket ismi, tel, adres1 ve adres iki (optional), ülke, sehir, posta kodu
+		Shipping address; yukaridaki adresleri ayni olarak ekleyebilirler
+		Veya yeniden yukarıdaki tum adres bilgilerini farklı olarak ekleyebilirler
+
+US_018	Geri iade plani olmalı	RequestID; geri isteme istegi
+		Order ID: verilen urun numarası belli edilmeli
+		Ne kadar urun alindigi belli edilmeli
+		Tipi ve sebebi aciklanmali
+
+US_019	Store manager olarak takipçileri görebilmeliyim	Isim, e-posta tanımlanmalı
+		Islemleri tanımlanmalı
+
+US_020	Store manager olarak ürünlerin incelenebilmesi	Kullanici bilgisi, yazmış olduğu comment
+		Verdigi rate vecomment tarihi tanımlanmalı
+
+US_021	Store manager olarak satis raporlarının incelenmesi	Yillik rakamlar, en son ay, icinde bulunan ay, en son 7 gun
+		Veya specific bir tarih araligi secilebilmeli
+
+US_022	Indirimli ürünler listeleme ve sıralama	Tumunu gor linki olmali ve tiklandigin o kategorinin ana tayfalarına götürmeli
+		"İndirimli Ürünler siralanabilmeli :Varsayılan Sıralama -> Bu default seçenek olmali -> En çok incelenene göre sırala -> En çok oy alana göre sırala -> En yeniye göre sırala -> Fiyata göre sırala: Düşükten yükseğe -> Fiyata göre sırala: Yüksekten düşüğe"
+		Fiyata göre sırala: Düşükten yükseğe seçildiğinde fiyatlar kucukten buyuge gore sıralanmalı
+		Fiyata göre sırala: Yüksekten düşüğe seçildiğinde fiyatlar büyükten kucuge gore sıralanmalı
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
