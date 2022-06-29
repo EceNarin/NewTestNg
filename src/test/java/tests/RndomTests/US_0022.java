@@ -75,6 +75,14 @@ public class US_0022 {
         for (int i = 0; i < trd.allPrices.size(); i++) {
             prices1.add(i, Double.valueOf((trd.allPrices.get(i).getText().split("₺")[0])));
         }
+        boolean isDescSorted = true; // Baştan true dedik.
+        // Burada artık isAscSorted küçükten büyüğe sıralı mı değil mi gösterir.
+        for (int i = 1; i < trd.allPrices.size(); i++) {
+            if(prices1.get(i) > prices1.get(i-1)) {
+                isDescSorted = false; // Sırayı bozan koşul denk gelirse false olacak.
+            }
+        }
+        soft.assertTrue(isDescSorted);
 
         //8. kullanici "Fiyata göre sırala: Yüksekten düşüğe" seçecek
         select.selectByVisibleText("Fiyata göre sırala: Yüksekten düşüğe");
@@ -83,5 +91,16 @@ public class US_0022 {
         for (int i = 0; i < trd.allPrices.size(); i++) {
             prices2.add(i, Double.valueOf((trd.allPrices.get(i).getText().split("₺")[0])));
         }
+        // Burada artık isDescSorted büyükten küçüğe sıralı mı değil mi gösterir.
+        boolean isAscSorted = true; // Baştan true dedik.
+
+        for (int i = 1; i < trd.allPrices.size(); i++) {
+            if(prices1.get(i) < prices1.get(i-1)) {
+                isAscSorted = false; // Sırayı bozan koşul denk gelirse false olacak.
+            }
+        }
+        soft.assertTrue(isAscSorted);
+        soft.assertAll();
+        //Driver.getClose();
     }
 }
