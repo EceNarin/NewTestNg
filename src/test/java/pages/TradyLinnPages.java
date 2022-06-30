@@ -15,6 +15,9 @@ public class TradyLinnPages {
     }
     @FindBy(xpath = "//*[@id=\"header\"]/div/div[1]/div/div[2]/div/div[3]/div/div/a[1]/span")
     public WebElement girisyap;
+
+    @FindBy(xpath = "//*[@id=\"wcfm-followers\"]/tbody/tr/td")
+    public List<WebElement> takipcilerTableBody;
     @FindBy(xpath = "(//input[@id=\"username\"])[1]")
     public WebElement email;
     @FindBy(xpath = "(//input[@id=\"password\"])[1]")
@@ -37,6 +40,7 @@ public class TradyLinnPages {
     @FindBy(xpath = "//img[@id=\"featured_img_display\"]")
     public WebElement photo;
     //*[@id="wcfm_menu"]/div/a
+    //*[@id="wcfm_menu"]/div
     @FindBy(xpath = "//*[@id=\"wcfm_menu\"]/div")
     public List<WebElement> myStoreMenu;
     @FindBy(xpath = "//*[@id=\"wcfm-products\"]/thead/tr/th")
@@ -79,11 +83,62 @@ public class TradyLinnPages {
     public List<WebElement> faturaAdresleri;
     @FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/div[3]/div[2]/div/address/table/tbody/tr")
     public List<WebElement> gönderimAdresi;
+    //US_010
+    @FindBy(xpath = "//button[@class=\"button wcfm_add_attribute_term wcfm_select_all_attributes\"]")
+    public WebElement selectAll;
+
+    @FindBy(id="attributes_is_active_1")
+    public WebElement colorClickButton;
+    @FindBy(xpath = "//*[@id=\"wcfm_products_manage_form_attribute_head\"]/div")
+    public WebElement attirbute;
+
+    @FindBy(xpath = "//*[@id=\"attributes\"]/div[2]/span[2]/span[1]/span/ul/li")
+    public List<WebElement> colorText;
+    @FindBy(xpath = "//*[@id=\"attributes\"]/div[3]/span[2]/span[1]/span/ul/li")
+    public List<WebElement> sizeText;
+    @FindBy(xpath = "//input[@id=\"attributes_is_active_2\"]")
+    public WebElement sizeClickbutton;
+    @FindBy(xpath = "(//button[@class=\"button wcfm_add_attribute_term wcfm_select_all_attributes\"])[2]")
+    public WebElement selectAll2;
+
+
+
 
     @FindBy(xpath = "//button[@value=\"Değişiklikleri kaydet\"]")
     public WebElement degisiklikUpdate;
     @FindBy(xpath = "(//form[@method=\"post\"])[1]//p//label")
     public List<WebElement> hesapDetaylariForm;
+    //US008_009
+    @FindBy(xpath = "//input[@id=\"sku\"]")
+    public WebElement sku;
+    @FindBy(xpath = "//input[@id=\"manage_stock\"]")
+    public WebElement manageStock;
+    @FindBy(xpath = "//select[@id=\"stock_status\"]")
+    public WebElement allowBackorders;
+    @FindBy(xpath = "//input[@id=\"sold_individually\"]")
+    public WebElement sold;
+    @FindBy(xpath = "//input[@id=\"stock_qty\"]")
+    public WebElement stockQuity;
+    @FindBy(xpath = "//*[@id=\"wcfm_products_manage_form_shipping_head\"]/div")
+    public WebElement shipping;
+    @FindBy(xpath = "//input[@id=\"weight\"]")
+    public WebElement weight;
+    @FindBy(xpath = " //input[@id=\"length\"]")
+    public WebElement length;
+    @FindBy(xpath = "//input[@id=\"width\"]")
+    public WebElement width;
+    @FindBy(xpath = "//input[@id=\"height\"]")
+    public WebElement height;
+    @FindBy(xpath = "//select[@id=\"_wcfmmp_processing_time\"]")
+    public WebElement processingTime;
+
+
+
+
+
+
+
+
 
 
     //US_22
@@ -102,13 +157,68 @@ public class TradyLinnPages {
     //span[@class="price"]
     @FindBy(xpath = "/html/body/div[2]/div[1]/ul/li[3]")
     public WebElement check;
+    //US_012
+    @FindBy(xpath = "//img[@id=\"gallery_img_gimage_0_display\"]")
+    public WebElement littleImage;
+    @FindBy(xpath = "(//button[@id=\"menu-item-upload\"])[5]")
+    public WebElement accessFileDowload;
+    @FindBy(xpath = "//*[@id=\"__wp-uploader-id-4\"]")
+    public WebElement file2Dowload;
+    //13US
+    @FindBy(xpath = "//*[@id=\"add_new_coupon_dashboard\"]/span[2]")
+    public WebElement addCoupon;
+    @FindBy(xpath = "//input[@id=\"title\"]")
+    public WebElement couponText;
+    @FindBy(xpath = "//textarea[@id=\"description\"]")
+    public WebElement descriptionText;
+    @FindBy(xpath = "//select[@id=\"discount_type\"]")
+    public WebElement discountType;
+    @FindBy(xpath = "//input[@id=\"coupon_amount\"]")
+    public WebElement couponAmount;
+    @FindBy(xpath = "//input[@id=\"expiry_date\"]")
+    public WebElement expireDate;
+    @FindBy(xpath = "//input[@id=\"free_shipping\"]")
+    public WebElement freeShip;
+    @FindBy(xpath = "//input[@id=\"show_on_store\"]")
+    public WebElement showStore;
 
+
+
+
+
+
+
+//hakanhoca
+
+    @FindBy(xpath = "//*[@id=\"orders_details_general_expander\"]/table/tbody/tr/td")
+    public List<WebElement> takipciteslimatBilgileri;
+
+    @FindBy(xpath = "//*[@id=\"wcfm-orders\"]/tbody/tr[2]/td[9]/a[2]/span")
+    public WebElement emirlerViewDetails;
+    @FindBy(xpath = "//*[@id=\"orders_details_general_expander\"]/p[3]/a")
+    public WebElement teslimatAdresi;
+
+    @FindBy(xpath = "//*[@id=\"wcfm-refund-requests\"]/thead/tr/th")
+    public List<WebElement> tableHead;
+    public void getSpecificRow(String ... str){
+        List<Integer> nums=new ArrayList<>();
+        for (String each:str) {
+            for(int i=0;i<tableHead.size();i++){
+                if(tableHead.get(i).getText().equalsIgnoreCase(each)){
+                    nums.add(i);
+                }
+            }
+        }
+        System.out.println(nums);
+        for(int i=0;i<nums.size();i++){
+            System.out.println(Driver.getDriver().findElement(By.xpath("//*[@id=\"wcfm-refund-requests\"]/tbody/tr/td[" + nums.get(i) + "]")).getText());
+        }
+    }
     public WebElement selecto(String str){
         List<WebElement> element=Driver.getDriver().findElements(By.xpath("//*[@id=\"main\"]/div/div/div/div/div/div/section/div/div[1]/div/div/div/h2/a"));
         WebElement elemento=null;
         for(int i=0;i<element.size();i++){
             if(element.get(i).getText().trim().equalsIgnoreCase(str)){
-
                 elemento= Driver.getDriver().findElements(By.xpath("//*[@id=\"main\"]/div/div/div/div/div/div/section/div/div[2]/div/div/div/h2/a")).get(i);
             }
         }
@@ -131,9 +241,9 @@ public class TradyLinnPages {
         }
         return element;
     }
-    public WebElement choiceContainsElement(List<WebElement> myStoreMenu,String str){
+    public WebElement choiceContainsElement(List<WebElement> a,String str){
         WebElement element=null;
-        for (WebElement w:myStoreMenu) {
+        for (WebElement w:a) {
             if(w.getText().trim().toLowerCase().contains(str.toLowerCase())){
                 element=w;
             }
