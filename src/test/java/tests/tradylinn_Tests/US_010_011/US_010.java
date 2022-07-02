@@ -1,43 +1,78 @@
 package tests.tradylinn_Tests.US_010_011;
 
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
+import pages.TradyLinnPages;
+import utilities.ConfigReader;
+import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.Arrays;
+import java.util.List;
 
 public class US_010 {
+    TradyLinnPages trd=new TradyLinnPages();
+    SoftAssert soft=new SoftAssert();
+    Actions action=new Actions(Driver.getDriver());
+    @BeforeMethod
+    public void before(){
+        // User goes to tradylinn.com
+        Driver.getDriver().get(ConfigReader.getProperty("tradyUrl"));
+        //        User clicks "Giriş Yap"
+        trd.girisyap.click();
+        //        User enters email
+        trd.email.sendKeys(ConfigReader.getProperty("userMailOrtak"));
+        //        User enters password
+        trd.password.sendKeys(ConfigReader.getProperty("userPasswordOrtak"));
+        //        User clicks "Giriş Yap" button
+        trd.login.click();
+        //        User clicks "Hesabım"
+        ReusableMethods.waitFor(5);
+        trd.hesabim.click();
+        //        User clicks "Store Manager"
+        trd.storeManager.click();
+        //        User clicks "Ürün"
+        trd.choiceContainsElement(trd.myStoreMenu,"Ürün").click();
+        //User clicks "Yeni ekle" button
+        trd.addNewProduct.click();
+    }
     @Test
     public void task_001() {
-        //1) Vendor goes to tradylinn.com
-        //2) Vendor clicks "Hesabım" if "GirisYap" button is not displayed
-        //3-) Vendor switchs to 9th step
-        //4) Vendor clicks "Giriş Yap" if "GirisYap" button is displayed
-        //5) Vendor enters email
-        //6) Vendor enters password
-        //7) Vendor clicks "Giriş Yap" button
-        //8) Vendor clicks "Hesabım"
-        //9) Vendor clicks "Store Manager"
-        //10) Vendor clicks "Ürün%s"
-        //11) Vendor clicks "Yeni Ekle"
-        //12) Vendor clicks "Attributes" tab
-        //13) Vendor clicks "color radio button"  to associate the colour attribute with the product
-        //14 )  Vendor selects as many colors as he/she wants via the color dropdown menu.
-        //15) Vendor clicks " Visible on the product page" radio button to associate this attribute with the product if it is not selected
-    }
+        JavascriptExecutor js=(JavascriptExecutor) Driver.getDriver();
+        ReusableMethods.waitFor(4);
+        //user down page attiribute
+        js.executeScript("arguments[0].click();",trd.attirbute);
+        ReusableMethods.waitFor(4);
+        //user clicks
+        trd.colorClickButton.click();
+        //user clicks selectAll
+        trd.selectAll.click();
+        //user verify all selects
+        trd.colorText.stream().forEach(t-> System.out.println(t.getText()));
+        boolean verify=trd.colorText.stream().allMatch(t->t.isDisplayed());
+        soft.assertTrue(verify);
+          }
     @Test
     public void task_002() {
-        //1) Vendor goes to tradylinn.com
-        //2) Vendor clicks "Hesabım" if "GirisYap" button is not displayed
-        //3-) Vendor switchs to 9th step
-        //4) Vendor clicks "Giriş Yap" "if "GirisYap" button is displayed
-        //5) Vendor enters email
-        //6) Vendor enters password
-        //7) Vendor clicks "Giriş Yap" button
-        //8) Vendor clicks "Hesabım"
-        //9) Vendor clicks "Store Manager"
-        //10) Vendor clicks "Ürün"
-        //11) Vendor clicks "Yeni Ekle"
-        //12) Vendor clicks "Attributes" tab
-        //13) Vendor clicks "Size radio button"  to associate the size attribute with the product
-        //14 )  Vendor selects as many size as he/she wants via the size dropdown menu.
-        //15) Vendor clicks  " Visible on the product page" radio button  to associate this attribute with the product if it is not selected
-    }
+        action.sendKeys(Keys.PAGE_DOWN,Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(4);
+        //user down page attiribute
+        trd.attirbute.click();
+        ReusableMethods.waitFor(4);
+        //user clicks
+        trd.sizeClickbutton.click();
+        //user clicks selectAll
+        trd.selectAll2.click();
+        //user verify all selects
+        ReusableMethods.waitFor(4);
+        trd.sizeText.stream().forEach(t-> System.out.println(t.getText()));
+        List<String> arr= Arrays.asList("Extra Large","Large","Medium","Small");
+        for(int i=0;i< arr.size();i++){
+            soft.assertTrue(trd.choiceContainsElement(trd.sizeText, arr.get(i)).isDisplayed());
+        }    }
 
 }

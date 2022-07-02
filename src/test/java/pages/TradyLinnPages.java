@@ -96,10 +96,26 @@ public class TradyLinnPages {
     public List<WebElement> colorText;
     @FindBy(xpath = "//*[@id=\"attributes\"]/div[3]/span[2]/span[1]/span/ul/li")
     public List<WebElement> sizeText;
+    //*[@id="attributes"]/div[3]/span[2]/span[1]/span/ul/li
     @FindBy(xpath = "//input[@id=\"attributes_is_active_2\"]")
     public WebElement sizeClickbutton;
-    @FindBy(xpath = "(//button[@class=\"button wcfm_add_attribute_term wcfm_select_all_attributes\"])[2]")
+    @FindBy(xpath = "//*[@id=\"attributes\"]/div[3]/button[3]")
     public WebElement selectAll2;
+
+
+
+
+    //11
+    @FindBy(xpath = "//*[@id=\"wcfm_products_manage_form_toptan-urun-gosterme-ayarlari_head\"]/div")
+    public WebElement toptanUrun;
+
+    @FindBy(xpath = "//select[@id=\"piecetype\"]")
+    public WebElement pieceType;
+    @FindBy(xpath = "//input[@id=\"unitpercart\"]")
+    public WebElement unitperCart;
+    @FindBy(xpath = "//input[@id=\"minorderqtytr\"]")
+    public WebElement minOrder;
+
 
 
 
