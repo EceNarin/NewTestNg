@@ -148,9 +148,21 @@ public class TradyLinnPages {
     @FindBy(xpath = "//select[@id=\"_wcfmmp_processing_time\"]")
     public WebElement processingTime;
 
+//12
 
+@FindBy(xpath = "//*[@id=\"wcfm-orders\"]/thead/tr/th")
+public List<WebElement> emirlerTable;
+//*[@id="wcfm-orders"]/tbody/tr[1]/td
+    public List<WebElement> getCell(List<WebElement> emirlerTable,String str){
+        int x=0;
+        for(int i=0;i<emirlerTable.size();i++){
+            if(emirlerTable.get(i).getText().equalsIgnoreCase(str)){
+                x=i;
+            }
+        }
+        return Driver.getDriver().findElements(By.xpath("//*[@id=\"wcfm-orders\"]/tbody/tr[1]/td["+x+""));
 
-
+    }
 
 
 
