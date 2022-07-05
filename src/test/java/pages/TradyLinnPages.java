@@ -210,6 +210,27 @@ public List<WebElement> emirlerTable;
     @FindBy(xpath = "//input[@id=\"show_on_store\"]")
     public WebElement showStore;
 
+//14US
+@FindBy(xpath = "//div[@id=\"coupons_manage_restriction\"]")
+public WebElement restriction;
+
+@FindBy(xpath = "//input[@id=\"minimum_amount\"]")
+public WebElement minimum_amount;
+
+    @FindBy(xpath = "//input[@id=\"maximum_amount\"]")
+    public WebElement maximum_amount;
+
+    @FindBy(xpath = "//input[@id=\"individual_use\"]")
+    public WebElement individual_use;
+
+    @FindBy(xpath = "//input[@id=\"exclude_sale_items\"]")
+    public WebElement exclude_sale_items;
+
+    @FindBy(xpath = "//select[@id=\"product_categories\"]")
+    public WebElement product_categories;
+
+    @FindBy(xpath = "//select[@id=\"exclude_product_categories\"]")
+    public WebElement exclude_product_categories;
 
 
 
