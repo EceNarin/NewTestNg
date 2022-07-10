@@ -209,6 +209,22 @@ public List<WebElement> emirlerTable;
     public WebElement freeShip;
     @FindBy(xpath = "//input[@id=\"show_on_store\"]")
     public WebElement showStore;
+    //20
+    @FindBy(xpath = "//*[@id=\"wcfm-reviews\"]/thead/tr/th")
+    public List<WebElement> incelemelerTable;
+    @FindBy(xpath = " //*[@id=\"add_new_product_dashboard\"]/span[2]")
+    public WebElement productReview;
+//03
+@FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/nav/ul/li")
+public List<WebElement> heabimPano;
+
+@FindBy(xpath = "//*[@id=\"main\"]/div/div/div/div/div/div/div/table/tbody/tr")
+public List<WebElement> siparisler;
+
+    @FindBy(linkText = "Alışverişe Devam Et")
+    public WebElement alisveriseDevamEt;
+
+
 
 //14US
 @FindBy(xpath = "//div[@id=\"coupons_manage_restriction\"]")

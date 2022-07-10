@@ -3,6 +3,7 @@ package tests.tradylinn_Tests.US_001_002;
 import org.testng.annotations.Test;
 
 public class US_001 {
+
     @Test
     public void task01() {
         //1) User goes to tradylinn.com
